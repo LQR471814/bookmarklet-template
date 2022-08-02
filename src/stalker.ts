@@ -87,7 +87,10 @@ function stalk(u: User) {
     const notify = (state: string) => {
         const message = `${u.name} is now ${state}.`
         console.log(message)
-        const notification = new Notification('lurking toolkit', { body: message, renotify: true })
+        const notification = new Notification('lurking toolkit', {
+            requireInteraction: true,
+            body: message,
+        })
         notification.onclick = () => {
             window.location.assign(u.href)
         }
@@ -133,7 +136,7 @@ if (Notification.permission !== "granted") {
             }
         },
         () => {
-            for (const k in cleanup){
+            for (const k in cleanup) {
                 cleanup[k]()
             }
         }
