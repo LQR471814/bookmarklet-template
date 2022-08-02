@@ -1,6 +1,6 @@
-## bookmarklets
+## bookmarklet-template
 
-> small javascript snippets that make websites more enjoyable
+> a monoerepo of small javascript snippets that make websites more enjoyable, this can double as template for bookmarklets
 
 ### catalog
 
