@@ -1,6 +1,6 @@
 ## bookmarklet-template
 
-> a monoerepo of small javascript snippets that make websites more enjoyable, this can double as template for bookmarklets
+> a monoerepo of javascript bookmarklets, this can double as template for bookmarklets
 
 ### catalog
 
