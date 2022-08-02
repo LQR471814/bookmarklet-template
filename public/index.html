@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test bookmarklet</title>
+    <script>
+        (async function() {
+            const index = await window.fetch(`${window.location.origin}/index.txt`)
+            const files = (await index.text()).split("\n")
+
+            const ul = document.getElementById("index")
+            for (const f of files) {
+                const li = document.createElement("li")
+
+                const a = document.createElement("a")
+                a.innerText = f
+                a.href = `./view.html?scriptname=${f}.js`
+
+                li.append(a)
+                ul.append(li)
+            }
+
+            document.body.append(ul)
+        })()
+    </script>
+</head>
+
+<body>
+    <ul id="index"></ul>
+</body>
+
+</html>

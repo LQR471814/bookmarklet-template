@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "lib": ["ESNext", "DOM"],
+        "strict": true,
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
